@@ -6,7 +6,6 @@ __pycache__/
 *.pyproj
 *.pyc
 *.sh
-*.pth
 *.json
 
 experiments/
