@@ -1,0 +1,35 @@
+{
+    "mode": "sr",
+    "use_cl": true,
+    "gpu_ids": [0],
+
+    "scale": 3,
+    "degradation": "BI",
+    "is_train": false,
+    "use_chop": true,
+    "rgb_range": 255,
+    "self_ensemble": false,
+
+    "datasets": {
+        "test_set1": {
+            "mode": "LRHR",
+            "dataroot_HR": "./results/HR/MRI13/x3",
+            "dataroot_LR": "./results/LR/MRI13/x3",
+            "data_type": "img"
+        }
+    },
+
+    "networks": {
+        "which_model": "FAWDN",
+        "num_features": 16,
+        "in_channels": 3,
+        "out_channels": 3,
+        "num_steps": 2,
+        "nDenselayer": 8,
+        "nBlock": 8
+    },
+
+    "solver": {
+        "pretrained_path": "./models/best_FAWDN+_x3.pth"
+    }
+}
